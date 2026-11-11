@@ -1,0 +1,383 @@
+<title>Sixt Students</title>
+<meta name="claude:viewport-fit-sides" content="cover" />
+<!--
+  Three things to fill in before sharing:
+  1. DEMO_URL   – every link with class "js-demo" (search for "https://YOUR-DEMO-URL")
+  2. Video      – replace the placeholder inside #video-frame (see the comment there)
+  3. Password   – the demo password in the "Try it yourself" section
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap"
+/>
+<link rel="stylesheet" href="style.css" />
+
+<header class="top">
+  <div class="wrap">
+    <image
+      src="images/sixtStudentsLogo.svg"
+      width="144"
+      height="72"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <nav class="top__links" aria-label="Project links">
+      <a class="hide-sm" href="#video">Video</a>
+      <a class="hide-sm" href="#about">About</a>
+      <a href="https://github.com/fransp10/schedulingApp">Source code</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hero__by">
+          A project by <strong>Fran Sipek</strong> for Infobip Ignite
+        </p>
+        <h1>Sixt Students</h1>
+        <p class="hero__lede">
+          Shift scheduling, contracts and payroll for students who work
+          part-time at a car rental branch.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary js-demo" href="https://YOUR-DEMO-URL">
+            Open the live demo
+            <svg
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 13 13 7M8 7h5v5"></path>
+            </svg>
+          </a>
+          <a class="btn btn--ghost" href="#video">Watch the walkthrough</a>
+        </div>
+      </div>
+
+      <figure class="shifts" style="margin: 0">
+        <h2>Three shifts, every day</h2>
+        <p class="shifts__sub">
+          Students request the slots they want. The admin staffs each one.
+        </p>
+        <div
+          class="shifts__rows"
+          role="img"
+          aria-label="Morning shift 07:00 to 15:00, middle shift 10:00 to 18:00, afternoon shift 14:00 to 22:00"
+        >
+          <div class="row">
+            <p class="row__label">Morning <span>07:00–15:00</span></p>
+            <div class="track">
+              <div
+                class="bar"
+                style="--s: 7; --e: 15; --c: var(--shift-morning)"
+              ></div>
+            </div>
+          </div>
+          <div class="row">
+            <p class="row__label">Middle <span>10:00–18:00</span></p>
+            <div class="track">
+              <div
+                class="bar"
+                style="--s: 10; --e: 18; --c: var(--shift-middle)"
+              ></div>
+            </div>
+          </div>
+          <div class="row">
+            <p class="row__label">Afternoon <span>14:00–22:00</span></p>
+            <div class="track">
+              <div
+                class="bar"
+                style="--s: 14; --e: 22; --c: var(--shift-afternoon)"
+              ></div>
+            </div>
+          </div>
+          <div class="row" aria-hidden="true">
+            <span></span>
+            <div class="axis">
+              <span style="--h: 6">06</span><span style="--h: 10">10</span
+              ><span style="--h: 14">14</span><span style="--h: 18">18</span
+              ><span style="--h: 22">22</span>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="video" id="video" aria-label="Walkthrough video">
+    <div class="wrap">
+      <div class="video__frame" id="video-frame">
+        <!--
+          Replace the placeholder div below with ONE of these:
+          • Self-hosted file:  <video controls preload="metadata" poster="poster.jpg" src="walkthrough.mp4"></video>
+          • YouTube (only when the page is hosted outside claude.ai):
+            <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Sixt Students walkthrough"
+                    allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        -->
+        <div class="video__placeholder">
+          <div class="play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"
+              ></path>
+            </svg>
+          </div>
+          <strong>Walkthrough video</strong>
+          <span>The student side and the admin side, start to finish</span>
+        </div>
+      </div>
+      <div class="video__covers">
+        <span id="covers-label">In the video:</span>
+        <ul
+          class="video__covers"
+          aria-labelledby="covers-label"
+          style="margin: 0"
+        >
+          <li>Requesting a shift</li>
+          <li>Staffing the week</li>
+          <li>Attendance</li>
+          <li>Contracts</li>
+          <li>Earnings race</li>
+          <li>Monthly payroll</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="about">
+        <div>
+          <h2>About the project</h2>
+          <div class="about__text">
+            <p>
+              Students who work at a car rental branch pick up shifts across
+              three overlapping daily slots. Sixt Students gives them one place
+              to request those shifts, upload their contracts and see what they
+              have earned. It gives the branch admin one place to staff the
+              week, record who actually showed up, and pay everyone the right
+              amount at the end of the month.
+            </p>
+            <p>
+              I built it on my own, from the database up: a React and TypeScript
+              client, an Express API on PostgreSQL, contract files in S3, and
+              Docker to run it all. Shifts are generated every night by a
+              scheduled job, and each student’s hours and pay are calculated
+              from the shifts they actually worked.
+            </p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Built by</dt>
+            <dd>Fran Sipek, solo</dd>
+          </div>
+          <div>
+            <dt>Users</dt>
+            <dd>Students and one branch admin</dd>
+          </div>
+          <div>
+            <dt>Frontend</dt>
+            <dd>React 19, TypeScript, Tailwind, TanStack Query, Recharts</dd>
+          </div>
+          <div>
+            <dt>Backend</dt>
+            <dd>Node.js, Express 5, PostgreSQL</dd>
+          </div>
+          <div>
+            <dt>Infrastructure</dt>
+            <dd>Docker, AWS S3, Resend</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="roles-title">
+    <div class="wrap">
+      <h2 id="roles-title">What each side of the app does</h2>
+      <div class="roles">
+        <div>
+          <h3>Students <span>5 screens</span></h3>
+          <ul>
+            <li>
+              <div>
+                <b>Request shifts</b
+                ><span
+                  >Pick open morning, middle or afternoon slots on the weekly
+                  calendar.</span
+                >
+              </div>
+            </li>
+            <li>
+              <div>
+                <b>Upload contracts</b
+                ><span
+                  >Send the monthly contract up to three months ahead.</span
+                >
+              </div>
+            </li>
+            <li>
+              <div>
+                <b>Track earnings</b
+                ><span>Hours and pay by month, shift type and weekday.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <b>Race to a goal</b
+                ><span
+                  >Set a monthly goal and see how you rank against
+                  teammates.</span
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Admin <span>6 screens</span></h3>
+          <ul>
+            <li>
+              <div>
+                <b>Staff the week</b
+                ><span>Assign students from the requests on each shift.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <b>Record attendance</b
+                ><span
+                  >Mark who showed up and correct start and end times.</span
+                >
+              </div>
+            </li>
+            <li>
+              <div>
+                <b>Chase contracts</b
+                ><span>See whose contract is missing and send a reminder.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <b>Close payroll</b
+                ><span
+                  >Check the month against the budget and export it to
+                  CSV.</span
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo" aria-labelledby="demo-title">
+    <div class="wrap">
+      <div>
+        <h2 id="demo-title">Try it yourself</h2>
+        <p>
+          The demo runs with sample students and shifts. Log in as the admin to
+          manage the branch, or as a student to see their side.
+        </p>
+        <a class="btn btn--primary js-demo" href="https://YOUR-DEMO-URL">
+          Open the live demo
+          <svg
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M7 13 13 7M8 7h5v5"></path>
+          </svg>
+        </a>
+      </div>
+      <dl class="accounts" aria-label="Demo accounts">
+        <div class="acct">
+          <dt>Admin</dt>
+          <dd><code>admin.horvat</code></dd>
+          <button
+            class="copy"
+            type="button"
+            id="copy-admin"
+            data-copy="admin.horvat"
+          >
+            Copy
+          </button>
+        </div>
+        <div class="acct">
+          <dt>Student</dt>
+          <dd><code>ante.babic</code></dd>
+          <button
+            class="copy"
+            type="button"
+            id="copy-student"
+            data-copy="ante.babic"
+          >
+            Copy
+          </button>
+        </div>
+        <div class="acct">
+          <dt>Password</dt>
+          <dd><span class="todo">add the demo password</span></dd>
+          <span></span>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span
+      >Fran Sipek · 2026 · Independent student project, not affiliated with
+      Sixt.</span
+    >
+    <a href="https://github.com/fransp10/schedulingApp"
+      >github.com/fransp10/schedulingApp</a
+    >
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll(".copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy");
+      var done = function () {
+        btn.textContent = "Copied";
+        setTimeout(function () {
+          btn.textContent = "Copy";
+        }, 1500);
+      };
+      var fallback = function () {
+        var code = btn.parentElement.querySelector("code");
+        var range = document.createRange();
+        range.selectNodeContents(code);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        btn.textContent = "Selected";
+        setTimeout(function () {
+          btn.textContent = "Copy";
+        }, 1500);
+      };
+      try {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } catch (e) {
+        fallback();
+      }
+    });
+  });
+</script>
