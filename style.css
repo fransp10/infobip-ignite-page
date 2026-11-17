@@ -125,6 +125,11 @@ h3 {
     border-color 150ms ease,
     transform 150ms ease;
 }
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .btn svg {
   width: 18px;
   height: 18px;
